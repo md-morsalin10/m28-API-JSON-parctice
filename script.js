@@ -19,25 +19,25 @@
 
 
 
-const jsonBtn = () => {
+// const jsonBtn = () => {
 
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-        .then(response => response.json()
-            .then(data => console.log(data)));
-}
+//     fetch('https://jsonplaceholder.typicode.com/todos/1')
+//         .then(response => response.json()
+//             .then(data => console.log(data)));
+// }
 
-const loadComment = () => {
-    const url = 'https://jsonplaceholder.typicode.com/posts'
-    fetch(url)
-    .then(res => res.json()
-    .then(data => {
-        console.log(data);
-        displayPost(data);
-    }))
-}
+// const loadComment = () => {
+//     const url = 'https://jsonplaceholder.typicode.com/posts'
+//     fetch(url)
+//     .then(res => res.json()
+//     .then(data => {
+//         console.log(data);
+//         displayPost(data);
+//     }))
+// }
 
-const displayPost = (posts) => {
-    posts.forEach((post=>{
-        console.log(post)
-    }))
-}
+// const displayPost = (posts) => {
+//     posts.forEach((post=>{
+//         console.log(post)
+//     }))
+// }
