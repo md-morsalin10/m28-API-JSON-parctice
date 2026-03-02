@@ -8,20 +8,23 @@ const loadComment = () => {
             displayPost(data)
         });
 }
-//  get the container 
-const postContainer =  document.getElementById('post-container')
-// console.log(postContainer);
 
-const displayPost = (posts) => {
-    posts.forEach(post =>{
-        // console.log(post.title);
-        // create list element
-        const li = document.createElement("li");
-        li.innerText = post.title;
-
-        // 3 append to the container 
-        postContainer.appendChild(li);
-
-        
+const displayPost = (posts) =>{
+    // 1 get the container 
+    const postContainer = document.getElementById("post-container")
+    postContainer.innerHTML = "";
+    
+    posts.forEach(post=> {
+    
+        // 2 create an element
+        const div = document.createElement("div");
+        div.innerHTML=`
+        <div class="post-card">
+            <h2>${post.title}</h2>
+            <p>${post.body}</p>
+        </div>
+        `
+        postContainer.appendChild(div);
     })
 }
+loadComment();
